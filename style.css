@@ -1,0 +1,249 @@
+
+/* CSS Reset - START */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color-scheme: dark;
+}
+/* CSS Reset - END */
+
+
+/* Navigation Bar - START */
+header{
+    position: relative;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: center; 
+    border-bottom: solid 1px #f1f1f1;
+    border-top: solid 1px #f1f1f1;
+}
+
+header ul li {
+    display: inline-block;
+    list-style: none;
+    font-size: 20px;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+header ul li:hover {
+    transform: scale(1.1);
+    transition: ease-in-out .2s;
+}
+/* Navigation Bar - END */
+
+/* Splash Screen -> STARTS */
+.intro {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0F0F0F;
+    transition: 2s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.8s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.8s;
+}
+/* Splash Screen -> END */
+
+
+/* Profile Hero - START */
+.profile-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    font-size: 20px;
+}
+
+.profile-hero img {
+    width: 15%;
+    margin-bottom: 25px;
+    border-radius: 50%;
+}
+/* Profile Hero - END */
+
+/* Abstract - START */
+.profile-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.abstract {
+    width: 50%;
+    text-align: justify;
+    transform: translateX(50%);
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s 4.5s forwards;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s 5s forwards;
+}
+
+.btn a{
+    color: #ffffff;
+    transition: ease-in-out 0.5s;
+}
+
+.btn a:hover {
+    color: cyan;
+}
+
+
+/* Abstract - ENDS */
+
+/* Biography and Skills - START */
+.about-me {
+    position: relative;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: center; 
+    border-bottom: solid 1px #f1f1f1;
+    border-top: solid 1px #f1f1f1;
+    opacity: 0;
+    animation: fadeIn 1s 6s forwards;
+    margin-bottom: 30px;
+}
+
+.split-container {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    border-right: solid 1px #f1f1f1 ;
+    justify-content: center;
+    align-items: center;
+}
+
+#bio {
+    width: 50%;
+    text-align: justify;
+    transform: translateX(50%);
+    margin-top: 20px;
+}
+
+#bio h2 {
+    opacity: 0;
+    animation: fadeIn 1s 6.5s forwards;
+}
+
+#bio p {
+    opacity: 0;
+    animation: fadeIn 1s 7s forwards;
+}
+
+.skills {
+    position: relative;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: center; 
+    border-bottom: solid 1px #f1f1f1;
+    border-top: solid 1px #f1f1f1;
+    opacity: 0;
+    animation: fadeIn 1s 7.5s forwards;
+    margin-bottom: 30px;
+}
+
+.grid-container {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: auto auto auto;
+    padding: 5px;
+
+}
+
+.grid-item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.grid-item i {
+    color: white;
+    font-size: 200px;
+}
+/* Biography and Skills - ENDS */
+
+/* Page Appearing - START */
+header, main {
+    opacity: 0;
+}
+
+
+.fade-in-header {
+    animation: fadeIn 1s 3s forwards;
+}
+
+.fade-in-main {
+    animation: fadeIn 1s 3.5s forwards;
+}
+
+.fade-in-section-home {
+    opacity: 0;
+    animation: fadeIn 1s 4s forwards;
+}
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+/* Page Appearing - ENDS */
